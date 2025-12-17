@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthDrive | High-Performance Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .emoji-card {
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .emoji-card:hover {
+            border-color: #10b981;
+            transform: translateY(-4px);
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-extrabold tracking-tighter text-slate-900">
+                GROWTH<span class="text-emerald-500">DRIVE</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                <a href="#about" class="hover:text-emerald-600 transition-colors">Who We Are</a>
+                <a href="#services" class="hover:text-emerald-600 transition-colors">Services</a>
+                <a href="#tools" class="hover:text-emerald-600 transition-colors">Tools</a>
+                <a href="#results" class="hover:text-emerald-600 transition-colors">Case Studies</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/qr/FNA2NGSXJEZZD1" target="_blank" class="hidden sm:block bg-emerald-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-emerald-700 transition-all active:scale-95 shadow-lg shadow-emerald-100 text-center">
+                    Book Strategy
+                </a>
+                <button id="menu-btn" class="md:hidden text-slate-900 text-2xl p-2">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold translate-x-full md:hidden">
+            <button id="close-btn" class="absolute top-6 right-6 text-3xl text-slate-900 p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <a href="#about" class="mobile-link">Who We Are</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#results" class="mobile-link">Case Studies</a>
+            <a href="https://wa.me/qr/FNA2NGSXJEZZD1" target="_blank" class="bg-emerald-600 text-white px-8 py-3 rounded-xl mobile-link">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center reveal active">
+            <div class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-emerald-700 uppercase bg-emerald-50 rounded-lg">
+                Performance Marketing Agency
+            </div>
+            <h1 class="text-5xl lg:text-7xl font-black text-slate-900 mb-8 leading-[1.1]">
+                Digital Marketing That <br><span class="gradient-text">Drives Growth</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-slate-600 mb-10 leading-relaxed">
+                Marketing support for <strong>medical, jewelry, and interior design</strong> brands that turns attention into leads and sales.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <div class="px-6 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex items-center gap-3">
+                    <span class="text-2xl">🏥</span> <span class="font-bold text-slate-700 text-sm">Clinics & Wellness</span>
+                </div>
+                <div class="px-6 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex items-center gap-3">
+                    <span class="text-2xl">💎</span> <span class="font-bold text-slate-700 text-sm">Jewelry Brands</span>
+                </div>
+                <div class="px-6 py-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex items-center gap-3">
+                    <span class="text-2xl">🛋️</span> <span class="font-bold text-slate-700 text-sm">Interior Designers</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto pt-10 border-t border-slate-200">
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl mb-2">📊</span>
+                    <span class="text-xs font-bold uppercase tracking-tighter text-slate-400">Strategy</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl mb-2">🎯</span>
+                    <span class="text-xs font-bold uppercase tracking-tighter text-slate-400">Paid Ads</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl mb-2">🎞️</span>
+                    <span class="text-xs font-bold uppercase tracking-tighter text-slate-400">Content</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl mb-2">🎨</span>
+                    <span class="text-xs font-bold uppercase tracking-tighter text-slate-400">Design</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-2xl mb-2">📈</span>
+                    <span class="text-xs font-bold uppercase tracking-tighter text-slate-400">Analytics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="aspect-square bg-slate-50 rounded-[40px] flex flex-col items-center justify-center p-12 border border-slate-100 shadow-inner">
+                        <span class="text-[120px] mb-4">🤝</span>
+                        <div class="text-center">
+                            <h3 class="text-3xl font-black text-slate-900">Leadership Team</h3>
+                            <p class="text-emerald-600 font-bold uppercase tracking-widest text-sm mt-2">2-Person Performance Unit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h2 class="text-4xl font-black text-slate-900 mb-6">Who We Are</h2>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        We’re a two‑person digital marketing leadership team with years of hands‑on experience. We focus on <strong>performance, clarity, and measurable results</strong>. Our work helps brands grow online, attract real customers, and increase revenue consistently.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span class="text-3xl block mb-2">🎯</span>
+                            <h4 class="font-bold text-slate-900">No Busy Work</h4>
+                            <p class="text-sm text-slate-500">Only actions that move the needle.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                            <span class="text-3xl block mb-2">⚡</span>
+                            <h4 class="font-bold text-slate-900">Fast Execution</h4>
+                            <p class="text-sm text-slate-500">Lean team means zero bureaucracy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-black text-slate-900 mb-4">What We Do</h2>
+                <p class="text-emerald-600 font-bold uppercase tracking-widest text-sm italic">"Turning attention into leads and sales"</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Social -->
+                <div class="emoji-card p-8 rounded-3xl reveal">
+                    <div class="text-4xl mb-6">📱</div>
+                    <h3 class="text-xl font-bold mb-4">Social & Content</h3>
+                    <ul class="text-slate-500 space-y-3 text-sm mb-6">
+                        <li>• Daily posting & community</li>
+                        <li>• Content calendars</li>
+                        <li>• SEO-aligned captions</li>
+                        <li>• Organic growth planning</li>
+                    </ul>
+                    <div class="pt-4 border-t border-slate-100 text-xs font-bold text-emerald-600 uppercase tracking-widest">
+                        Impact: Brand Visibility
+                    </div>
+                </div>
+
+                <!-- Design -->
+                <div class="emoji-card p-8 rounded-3xl reveal" style="transition-delay: 100ms;">
+                    <div class="text-4xl mb-6">🎬</div>
+                    <h3 class="text-xl font-bold mb-4">Design & Video</h3>
+                    <ul class="text-slate-500 space-y-3 text-sm mb-6">
+                        <li>• Reels, Shorts, Graphics</li>
+                        <li>• Branded visual content</li>
+                        <li>• Fast turnaround edits</li>
+                        <li>• High-retention assets</li>
+                    </ul>
+                    <div class="pt-4 border-t border-slate-100 text-xs font-bold text-emerald-600 uppercase tracking-widest">
+                        Impact: More Shares
+                    </div>
+                </div>
+
+                <!-- Ads -->
+                <div class="emoji-card p-8 rounded-3xl reveal" style="transition-delay: 200ms;">
+                    <div class="text-4xl mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-4">Paid Ads (Meta)</h3>
+                    <ul class="text-slate-500 space-y-3 text-sm mb-6">
+                        <li>• Lead gen campaigns</li>
+                        <li>• Precision targeting</li>
+                        <li>• Creative optimization</li>
+                        <li>• Cost per lead focus</li>
+                    </ul>
+                    <div class="pt-4 border-t border-slate-100 text-xs font-bold text-emerald-600 uppercase tracking-widest">
+                        Impact: Faster ROI
+                    </div>
+                </div>
+
+                <!-- Reporting -->
+                <div class="emoji-card p-8 rounded-3xl reveal" style="transition-delay: 300ms;">
+                    <div class="text-4xl mb-6">📊</div>
+                    <h3 class="text-xl font-bold mb-4">Performance</h3>
+                    <ul class="text-slate-500 space-y-3 text-sm mb-6">
+                        <li>• Simple monthly reports</li>
+                        <li>• Strategy-driving insights</li>
+                        <li>• Regular reviews</li>
+                        <li>• Data-backed pivots</li>
+                    </ul>
+                    <div class="pt-4 border-t border-slate-100 text-xs font-bold text-emerald-600 uppercase tracking-widest">
+                        Impact: Strategic Clarity
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="py-24 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 reveal">
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Design & Video</h5>
+                    <div class="flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">Canva</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">Adobe</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">CapCut</span>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Ads & Social</h5>
+                    <div class="flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">Meta Business</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">LinkedIn Ads</span>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6">SEO & Analytics</h5>
+                    <div class="flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">GA4</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">SEMrush</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">Ahrefs</span>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-6">Web & Tech</h5>
+                    <div class="flex flex-wrap gap-2 text-sm font-bold text-slate-700">
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">WordPress</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">Wix</span>
+                        <span class="px-3 py-1 bg-slate-100 rounded-md">HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof / Case Summaries -->
+    <section id="results" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-black text-slate-900">Proof of Concept</h2>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="p-10 bg-emerald-600 rounded-[40px] text-white reveal">
+                    <span class="text-4xl block mb-6">🛒</span>
+                    <h4 class="text-xl font-bold mb-4">E-com Lead Growth</h4>
+                    <div class="text-5xl font-black mb-4">20,000+</div>
+                    <p class="text-emerald-100 text-sm mb-6">Quality leads with 98% conversion rate. Result: Strong sales pipeline.</p>
+                </div>
+                <!-- Case 2 -->
+                <div class="p-10 bg-slate-900 rounded-[40px] text-white reveal" style="transition-delay: 100ms;">
+                    <span class="text-4xl block mb-6">💼</span>
+                    <h4 class="text-xl font-bold mb-4">LinkedIn B2B</h4>
+                    <div class="text-5xl font-black mb-4">1,000+</div>
+                    <p class="text-slate-400 text-sm mb-6">Relevant followers. Result: Better brand positioning in target circles.</p>
+                </div>
+                <!-- Case 3 -->
+                <div class="p-10 bg-blue-600 rounded-[40px] text-white reveal" style="transition-delay: 200ms;">
+                    <span class="text-4xl block mb-6">🏗️</span>
+                    <h4 class="text-xl font-bold mb-4">Heavy Equipment</h4>
+                    <div class="text-5xl font-black mb-4">+300%</div>
+                    <p class="text-blue-100 text-sm mb-6">More leads. Result: Conversions at controlled spend.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 reveal">
+                <div class="flex gap-6">
+                    <span class="text-4xl">🚀</span>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Results, Not Busy Work</h4>
+                        <p class="text-slate-500">Focus on measurable performance metrics.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <span class="text-4xl">💡</span>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Strategy Included</h4>
+                        <p class="text-slate-500">We don't just execute, we provide the roadmap.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <span class="text-4xl">📊</span>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Real Accountability</h4>
+                        <p class="text-slate-500">Performance reporting and insights every month.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6">
+                    <span class="text-4xl">🔄</span>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Flexible & Agile</h4>
+                        <p class="text-slate-500">Quick pivots based on what the data tells us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-32 bg-emerald-600 text-white text-center reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-5xl font-black mb-8 italic leading-tight">Map Your Next <br>90-Day Growth Plan</h2>
+            <p class="text-xl text-emerald-50 mb-12 font-medium">Book a strategy chat to discuss how we can scale your business.</p>
+            <a href="https://wa.me/qr/FNA2NGSXJEZZD1" target="_blank" class="inline-block px-12 py-6 bg-white text-emerald-600 font-black text-2xl rounded-2xl shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                Let's Talk Strategy! 💬
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-xl font-black tracking-tighter text-slate-900">
+                GROWTH<span class="text-emerald-500">DRIVE</span>
+            </div>
+            <div class="text-slate-400 text-xs font-bold uppercase tracking-widest">
+                &copy; 2025 Digital Growth Partners. 🚀
+            </div>
+            <div class="flex gap-4">
+                <a href="https://wa.me/qr/FNA2NGSXJEZZD1" target="_blank" class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-emerald-500 transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        };
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', toggleMenu));
+    </script>
+</body>
+</html>
